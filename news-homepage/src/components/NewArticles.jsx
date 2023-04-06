@@ -1,5 +1,5 @@
 import { useState } from "react";
-import articleData from "./../articles/newArticles";
+import articleData from "../articles/newArticles";
 
 const NewArticles = () => {
   const [newArticles, setNewArticles] = useState(articleData);

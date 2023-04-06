@@ -1,5 +1,5 @@
-import mainImgMobile from "./../assets/images/image-web-3-mobile.jpg";
-import mainImgDesktop from "./../assets/images/image-web-3-desktop.jpg";
+import mainImgMobile from "../assets/images/image-web-3-mobile.jpg";
+import mainImgDesktop from "../assets/images/image-web-3-desktop.jpg";
 
 const MainArticle = () => {
   return (

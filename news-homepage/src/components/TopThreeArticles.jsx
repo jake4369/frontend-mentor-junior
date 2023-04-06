@@ -1,5 +1,5 @@
 import { useState } from "react";
-import TopThreeArticlesData from "./../articles/topThreeArticles";
+import TopThreeArticlesData from "../articles/topThreeArticles";
 
 const TopThreeArticles = () => {
   const [topThreeArticles, setTopThreeArticles] =
