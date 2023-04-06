@@ -3,7 +3,7 @@ import mainImgDesktop from "../assets/images/image-web-3-desktop.jpg";
 
 const MainArticle = () => {
   return (
-    <main className="main-article__container">
+    <div className="main-article__container">
       <picture>
         <source media="(min-width: 48rem)" srcSet={mainImgDesktop} />
         <img src={mainImgMobile} alt="" className="main-article__main-img" />
@@ -22,7 +22,7 @@ const MainArticle = () => {
           <button>READ MORE</button>
         </div>
       </div>
-    </main>
+    </div>
   );
 };
 

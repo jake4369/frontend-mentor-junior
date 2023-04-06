@@ -5,14 +5,14 @@ import TopThreeArticles from "./components/TopThreeArticles";
 
 const App = () => {
   return (
-    <div className="main-container">
+    <main className="main-container">
       <Header />
       <div className="flex-container">
         <MainArticle />
         <NewArticles />
       </div>
       <TopThreeArticles />
-    </div>
+    </main>
   );
 };
 

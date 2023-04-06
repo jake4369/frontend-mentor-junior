@@ -422,8 +422,6 @@ p.top-article__text {
   .main-article__article-container h1 {
     font-size: 3.5rem;
     line-height: 3.5rem;
-    display: flex;
-    align-items: center;
     margin: 0 4.1095890411% 0 0;
     width: 47.9452054795%;
     min-width: 21.875rem;
