@@ -284,6 +284,7 @@ p.new-article__text {
 
 .top-article {
   display: flex;
+  justify-content: space-between;
   margin-bottom: 2rem;
   height: 8.0625rem;
 }
@@ -296,7 +297,10 @@ p.new-article__text {
   width: 6.25rem;
   height: 8.0625rem;
   object-fit: cover;
-  margin-right: 1.5rem;
+}
+
+.top-article__text-container {
+  width: 63.8483965015%;
 }
 
 span.top-article__number {
