@@ -1,4 +1,4 @@
-const NavBar = ({ navOpen, setNavOpen }) => {
+const NavBar = ({ navOpen, setNavOpen, exitAnimation, setExitAnimation }) => {
   const closeMenu = () => {
     setNavOpen(false);
   };
@@ -6,7 +6,9 @@ const NavBar = ({ navOpen, setNavOpen }) => {
   return (
     <nav>
       <div
-        className={`mobile-nav__slider ${navOpen ? "slide-in-right" : ""}`}
+        className={`mobile-nav__slider ${
+          navOpen ? "slide-in-right" : exitAnimation ? "slide-out-right" : ""
+        }`}
         style={{
           opacity: navOpen ? 1 : 0,
         }}

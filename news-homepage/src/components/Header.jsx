@@ -4,15 +4,18 @@ import logo from "../assets/images/logo.svg";
 
 const Header = () => {
   const [navOpen, setNavOpen] = useState(false);
+  const [exitAnimation, setExitAnimation] = useState(false);
 
   const openMenu = () => {
     setNavOpen(true);
+    setExitAnimation(true);
   };
 
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 768) {
         setNavOpen(false);
+        setExitAnimation(false);
       }
     };
 
@@ -33,7 +36,12 @@ const Header = () => {
 
       <button className="open-menu-btn" onClick={() => openMenu()}></button>
 
-      <NavBar navOpen={navOpen} setNavOpen={setNavOpen} />
+      <NavBar
+        navOpen={navOpen}
+        setNavOpen={setNavOpen}
+        exitAnimation={exitAnimation}
+        setExitAnimation={exitAnimation}
+      />
     </header>
   );
 };
