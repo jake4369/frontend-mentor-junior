@@ -285,6 +285,7 @@ p.new-article__text {
 .top-article {
   display: flex;
   margin-bottom: 2rem;
+  height: 8.0625rem;
 }
 
 .top-article:last-of-type {
