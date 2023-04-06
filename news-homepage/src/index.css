@@ -18,6 +18,10 @@ html {
 body {
   font-family: "Inter", Arial, Helvetica, sans-serif;
   background: #fffdfa;
+}
+
+body,
+main {
   overflow-x: hidden;
 }
 
