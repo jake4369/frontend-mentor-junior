@@ -25,7 +25,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshots/mobile.png)
+![](./screenshots/mobile.png =350x700)
 ![](./screenshots/desktop.png)
 
 ### Links
