@@ -25,7 +25,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshots/mobile.png =350x700)
+img src="./screenshots/mobile.png" style="width: 300px;">
 ![](./screenshots/desktop.png)
 
 ### Links
