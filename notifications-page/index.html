@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="index.css" />
+
+    <title>Notifications page</title>
+  </head>
+  <body>
+    <main>
+      <div class="notification-controls">
+        <div class="notifications-total__container">
+          <h1>Notifications</h1>
+
+          <span class="notifications-total" id="notifications-total"></span>
+        </div>
+
+        <button
+          class="mark-all-read-btn"
+          id="mark-all-read-btn"
+          aria-label="Click here to mark all notifications as read"
+        >
+          Mark all as read
+        </button>
+      </div>
+
+      <div class="notification-components__container">
+        <!-- COMPONENT 1 -->
+        <div class="notification-component notification unread">
+          <img
+            src="./assets/images/avatar-mark-webber.webp"
+            alt=""
+            class="user-avatar"
+          />
+
+          <div class="notification-component__text-container">
+            <p class="notification-text">
+              <span class="username">Mark Webber</span> reacted to your recent
+              post
+              <span class="post-notification-link"
+                >My First tournament today!</span
+              >
+              <span class="active-dot"></span>
+            </p>
+
+            <p class="timespan">1m ago</p>
+          </div>
+        </div>
+
+        <!-- COMPONENT 2 -->
+        <div class="notification-component notification unread">
+          <img
+            src="./assets/images/avatar-angela-gray.webp"
+            alt=""
+            class="user-avatar"
+          />
+
+          <div class="notification-component__text-container">
+            <p class="notification-text">
+              <span class="username">Angela Gray</span> followed you<span
+                class="active-dot"
+              ></span>
+            </p>
+
+            <p class="timespan">5m ago</p>
+          </div>
+        </div>
+
+        <!-- COMPONENT 3 -->
+        <div class="notification-component notification unread">
+          <img
+            src="./assets/images/avatar-jacob-thompson.webp"
+            alt=""
+            class="user-avatar"
+          />
+
+          <div class="notification-component__text-container">
+            <p class="notification-text">
+              <span class="username">Jacob Thompson</span> has joined your group
+              <span class="group-notification-link">Chess Club</span>
+              <span class="active-dot"></span>
+            </p>
+
+            <p class="timespan">1 day ago</p>
+          </div>
+        </div>
+
+        <!-- COMPONENT 4 -->
+        <div
+          class="notification-component notification-component_pm notification"
+        >
+          <img
+            src="./assets/images/avatar-rizky-hasanuddin.webp"
+            alt=""
+            class="user-avatar"
+          />
+
+          <div class="notification-component__text-container">
+            <p class="notification-text">
+              <span class="username">Rizky Hasanuddin</span> sent you a private
+              message
+            </p>
+
+            <p class="timespan">5 days ago</p>
+
+            <div class="private-message__container">
+              <p class="private-message__text">
+                Hello, thanks for setting up the Chess Club. I’ve been a member
+                for a few weeks now and I’m already having lots of fun and
+                improving my game.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- COMPONENT 5 -->
+        <div class="notification-component notification">
+          <img
+            src="./assets/images/avatar-kimberly-smith.webp"
+            alt=""
+            class="user-avatar"
+          />
+
+          <div class="notification-component__text-container flex-container">
+            <div>
+              <p class="notification-text">
+                <span class="username">Kimberly Smith</span> commented on your
+                picture <span class="active-dot"></span>
+              </p>
+
+              <p class="timespan">1 week ago</p>
+            </div>
+
+            <img
+              src="./assets/images/image-chess.webp"
+              alt=""
+              class="commented-img"
+            />
+          </div>
+        </div>
+
+        <!-- COMPONENT 6 -->
+        <div class="notification-component notification">
+          <img
+            src="./assets/images/avatar-nathan-peterson.webp"
+            alt=""
+            class="user-avatar"
+          />
+
+          <div class="notification-component__text-container">
+            <p class="notification-text">
+              <span class="username">Nathan Peterson</span> reacted to your
+              recent post
+              <span class="post-notification-link"
+                >5 end-game strategies to increase your win rate</span
+              >
+              <span class="active-dot" id="active-dot"></span>
+            </p>
+
+            <p class="timespan">2 weeks ago</p>
+          </div>
+        </div>
+
+        <!-- COMPONENT 7 -->
+        <div class="notification-component notification">
+          <img
+            src="./assets/images/avatar-anna-kim.webp"
+            alt=""
+            class="user-avatar"
+          />
+
+          <div class="notification-component__text-container">
+            <p class="notification-text">
+              <span class="username">Anna Kim</span> left the group
+              <span class="group-notification-link">Chess Club</span>
+              <span class="active-dot"></span>
+            </p>
+
+            <p class="timespan">1 day ago</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="index.js"></script>
+  </body>
+</html>
