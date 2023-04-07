@@ -211,6 +211,7 @@ p.private-message__text {
   ==================== */
   .notification {
     cursor: pointer;
+    margin-bottom: 0.5rem;
   }
 
   .user-avatar {
