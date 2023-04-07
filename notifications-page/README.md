@@ -33,7 +33,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://lucent-torte-9b2766.netlify.app/]
 
 ## My process
 
@@ -78,7 +78,7 @@ I would like to re-do this challenge using React Js
 
 ### Useful resources
 
-- [https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener] - MDN is a great site to learn more about EnentTarget.addEventLister()
+- [https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener] - MDN is a great site to learn more about EventTarget.addEventLister()
 
 ## Author
 
