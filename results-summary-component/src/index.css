@@ -105,9 +105,9 @@ h1.results-section__heading {
   color: #fff;
 }
 
-/* .results-section__text-container {
+.results-section__text-container {
   opacity: 0;
-} */
+}
 
 .results-section__text-container span {
   display: block;
@@ -238,7 +238,7 @@ h2.summary-section__heading {
   outline: none;
   padding: 1.0625rem 0 1rem 0;
   width: 100%;
-  /* opacity: 0; */
+  opacity: 0;
 }
 
 @media (min-width: 48rem) {

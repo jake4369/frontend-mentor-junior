@@ -26,7 +26,7 @@ const ResultsSection = ({ showResults }) => {
       <h1 className="results-section__heading">Your Result</h1>
 
       <div className="result-container">
-        <span className="result-bold">76</span>
+        <span className="result-bold">{counter}</span>
         <span className="result">of 100</span>
       </div>
 

@@ -11,8 +11,8 @@ const SummarySection = ({ setShowResults }) => {
       <SummaryCard
         key={obj.title}
         data={obj}
-        // delay={`${index * 0.5}s`}
-        // className="fade-in-fwd"
+        delay={`${index * 0.5}s`}
+        className="fade-in-fwd"
       />
     );
   });
