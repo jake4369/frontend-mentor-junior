@@ -12,7 +12,6 @@ html {
 
 body {
   font-family: "Hanken Grotesk", Arial, Helvetica, sans-serif;
-  background-color: #ecf2ff;
   min-height: 100vh;
 }
 
@@ -248,6 +247,7 @@ h2.summary-section__heading {
     align-items: center;
     justify-content: center;
   }
+
   main {
     display: flex;
     max-width: 46rem;
