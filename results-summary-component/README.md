@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/results-summary-component-react-h-St4S0hvJ]
 - Live Site URL: [https://calm-frangollo-1fafbc.netlify.app/]
 
 ## My process
