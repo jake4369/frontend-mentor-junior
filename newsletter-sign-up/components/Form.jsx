@@ -1,12 +1,14 @@
 "use client";
 
 import { useState } from "react";
-
+import { useRouter } from "next/navigation";
 import { useEmail } from "@context/EmailContext";
+import Button from "./Button";
 
 const Form = () => {
   const { email, setEmail, validateEmail } = useEmail();
   const [isError, setIsError] = useState(false);
+  const router = useRouter();
 
   const handleEmailChange = (e) => {
     const newEmail = e.target.value;
@@ -18,10 +20,9 @@ const Form = () => {
     if (validateEmail(email)) {
       // Email is valid, you can proceed with further actions
       setIsError(false);
-      console.log(email);
+      router.push("/confirmation");
     } else {
       // Email is not valid, handle the error
-      console.log("Error");
       setIsError(true);
     }
   };
@@ -35,6 +36,7 @@ const Form = () => {
         {isError && <span className="error-message">Valid email required</span>}
       </div>
       <input
+        type="email"
         name="email"
         id="input__email"
         className={`input__email ${isError ? "error" : ""}`}
@@ -43,9 +45,7 @@ const Form = () => {
         onChange={handleEmailChange}
       />
 
-      <button type="submit" className="submit-btn">
-        Subscribe to monthly newsletter
-      </button>
+      <Button>Subscribe to monthly newsletter</Button>
     </form>
   );
 };
