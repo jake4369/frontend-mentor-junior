@@ -2,6 +2,9 @@ import HeroImg from "@components/HeroImg";
 import FormContainer from "@components/FormContainer";
 
 const Home = () => {
+  {
+    /* HOMEPAGE */
+  }
   return (
     <main>
       <HeroImg />
