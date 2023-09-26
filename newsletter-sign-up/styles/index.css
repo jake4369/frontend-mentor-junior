@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+:root {
+  --dark-navy: #242742;
+  --orange: #ff6a3a;
+  --pale-navy: #36384d;
+  --pink: #ff527b;
+  --vermellion: #ff6155;
+  --white: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  background: var(--pale-navy);
+  color: var(--dark-navy);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+main {
+  max-width: 28.125rem;
+  margin: 0 auto;
+  background: var(--white);
+}
+
+/* ==========
+HERO IMG
+========== */
+.hero-img__mobile {
+  width: 100%;
+  height: auto;
+}
+
+/* ==========
+ FORM CONTAINER
+ ========== */
+.form__container {
+  padding: 2.5rem 6.4%;
+}
+
+/* ==========
+ PRODUCT INFO
+ ========== */
+.product-info h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.product-info p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+ul.product-info__list {
+  list-style-type: none;
+  margin-bottom: 2.5rem;
+}
+
+li.product-info__list-item {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  margin-bottom: 0.625rem;
+}
+
+li.product-info__list-item:last-of-type {
+  margin-bottom: 0;
+}
+
+img.icon__list {
+  margin-right: 1rem;
+}
+
+/* ==========
+ FORM
+ ========== */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__label-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.form__label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.125rem;
+}
+
+.error-message {
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.125rem;
+  color: var(--vermellion);
+}
+
+.input__email {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(25, 24, 43, 0.25);
+  outline: none;
+  padding: 1rem 0 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.input__email::placeholder {
+  opacity: 0.5;
+}
+
+.input__email.error {
+  border: 1px solid var(--vermellion);
+  background: rgba(255, 97, 85, 0.15);
+  color: var(--vermellion);
+}
+
+.submit-btn {
+  color: var(--white);
+  text-align: center;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+  background: var(--dark-navy);
+  border: none;
+  border-radius: 0.5rem;
+  outline: none;
+  padding: 1.125rem 0 0.875rem;
+}
+/* ========================================
+ MEDIA QUERIES
+ ======================================== */
+@media (min-width: 1000px) {
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+
+  main {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    width: 64.4444444444%;
+    min-width: 58rem;
+    max-width: unset;
+    border-radius: 2.25rem;
+    box-shadow: 0px 15px 60px 0px rgba(0, 0, 0, 0.25);
+    padding: 1.5rem 1.5rem 1.5rem 4rem;
+  }
+
+  /* ==========
+      HERO IMG
+      ========== */
+  .hero-img__desktop {
+    width: 43.1034482759%;
+    min-width: 25rem;
+    height: auto;
+  }
+
+  /* ==========
+       FORM CONTAINER
+       ========== */
+  .form__container {
+    width: 40.5172413793%;
+    min-width: 23.5rem;
+    padding: 0;
+  }
+
+  .input__email {
+    cursor: pointer;
+  }
+
+  .input__email:hover,
+  .input__email:focus {
+    border: 1px solid var(--dark-navy);
+  }
+
+  /* ==========
+  PRODUCT INFO
+  ========== */
+  .product-info h1 {
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+  }
+
+  /* ==========
+  FORM
+  ========== */
+  .submit-btn {
+    cursor: pointer;
+  }
+
+  .submit-btn:hover {
+    --bg-size: 400%;
+    --color-one: hsl(15 90% 55%);
+    --color-two: hsl(40 95% 55%);
+    background: linear-gradient(90deg, var(--pink), var(--orange), var(--pink))
+      0 0 / var(--bg-size) 100%;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .submit-btn:hover {
+      animation: move-bg 8s linear infinite;
+    }
+    @keyframes move-bg {
+      to {
+        background-position: var(--bg-size) 0;
+      }
+    }
+  }
+}
