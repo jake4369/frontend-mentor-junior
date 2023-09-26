@@ -31,7 +31,6 @@ const HeroImg = () => {
 
   return (
     <div className="hero-img">
-      ({/* Hero Img */})
       {isMobile ? (
         <Image
           src="/illustration-sign-up-mobile.svg"
