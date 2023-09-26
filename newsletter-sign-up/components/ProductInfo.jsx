@@ -9,6 +9,7 @@ const ProductInfo = () => {
 
       <p>Join 60,000+ product managers receiving monthly updates on:</p>
 
+      {/* LIST */}
       <ul className="product-info__list">
         {productInfoList.map((item) => (
           <li key={item} className="product-info__list-item">
