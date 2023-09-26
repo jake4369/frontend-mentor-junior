@@ -30,6 +30,21 @@ img {
   max-width: 100%;
 }
 
+button {
+  color: var(--white);
+  text-align: center;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+  background: var(--dark-navy);
+  border: none;
+  border-radius: 0.5rem;
+  outline: none;
+  padding: 1.125rem 0 0.875rem;
+  width: 100%;
+}
+
 main {
   max-width: 28.125rem;
   margin: 0 auto;
@@ -54,17 +69,20 @@ HERO IMG
 /* ==========
  PRODUCT INFO
  ========== */
-.product-info h1 {
+h1 {
   font-size: 2.5rem;
   font-weight: 700;
   line-height: 2.5rem;
   margin-bottom: 1.5rem;
 }
 
-.product-info p {
+p {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5rem;
+}
+
+.product-info p {
   margin-bottom: 1.5rem;
 }
 
@@ -141,23 +159,54 @@ form {
   color: var(--vermellion);
 }
 
-.submit-btn {
-  color: var(--white);
-  text-align: center;
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
-  font-size: 1rem;
+/* ========================================
+ THANK YOU PAGE
+ ======================================== */
+.thankyou-container {
+  max-width: 28.125rem;
+  margin: 0 auto;
+  background: var(--white);
+  padding: 9.3125rem 6.4% 2.5rem;
+}
+
+img.icon-success {
+  margin-bottom: 2.5rem;
+}
+
+.thankyou-container p {
+  margin-bottom: 16.4375rem;
+}
+
+.thankyou__email-address {
   font-weight: 700;
-  line-height: 1.5rem;
-  background: var(--dark-navy);
-  border: none;
-  border-radius: 0.5rem;
-  outline: none;
-  padding: 1.125rem 0 0.875rem;
 }
 /* ========================================
  MEDIA QUERIES
  ======================================== */
 @media (min-width: 1000px) {
+  button {
+    cursor: pointer;
+  }
+
+  button:hover {
+    --bg-size: 400%;
+    --color-one: hsl(15 90% 55%);
+    --color-two: hsl(40 95% 55%);
+    background: linear-gradient(90deg, var(--pink), var(--orange), var(--pink))
+      0 0 / var(--bg-size) 100%;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    button:hover {
+      animation: move-bg 8s linear infinite;
+    }
+    @keyframes move-bg {
+      to {
+        background-position: var(--bg-size) 0;
+      }
+    }
+  }
+
   body {
     display: flex;
     align-items: center;
@@ -205,37 +254,32 @@ form {
     border: 1px solid var(--dark-navy);
   }
 
+  .input__email:hover.error,
+  .input__email:focus.error {
+    border: 1px solid var(--vermellion);
+  }
+
   /* ==========
   PRODUCT INFO
   ========== */
-  .product-info h1 {
+  h1 {
     font-size: 3.5rem;
     line-height: 3.5rem;
   }
 
-  /* ==========
-  FORM
-  ========== */
-  .submit-btn {
-    cursor: pointer;
+  /* ========================================
+ THANK YOU PAGE
+ ======================================== */
+  .thankyou-container {
+    width: 35%;
+    min-width: 31.5rem;
+    max-width: unset;
+    padding: 3rem 4rem 4rem;
+    border-radius: 2.25rem;
+    box-shadow: 0px 15px 60px 0px rgba(0, 0, 0, 0.25);
   }
 
-  .submit-btn:hover {
-    --bg-size: 400%;
-    --color-one: hsl(15 90% 55%);
-    --color-two: hsl(40 95% 55%);
-    background: linear-gradient(90deg, var(--pink), var(--orange), var(--pink))
-      0 0 / var(--bg-size) 100%;
-  }
-
-  @media (prefers-reduced-motion: no-preference) {
-    .submit-btn:hover {
-      animation: move-bg 8s linear infinite;
-    }
-    @keyframes move-bg {
-      to {
-        background-position: var(--bg-size) 0;
-      }
-    }
+  .thankyou-container p {
+    margin-bottom: 2.5rem;
   }
 }
