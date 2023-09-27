@@ -2,6 +2,7 @@
 
 @import "./components/Header/styles.css";
 @import "./components/Calculator/styles.css";
+@import "./components/About/styles.css";
 
 :root {
   --blue: #345ff6;
