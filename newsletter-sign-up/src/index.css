@@ -9,6 +9,7 @@
 :root {
   /* BACKGROUND COLOURS */
   --bg-dark-navy: #36384d;
+  --bg-white: #fff;
 
   /* TEXT COLOURS */
   --dark-navy: #242742;
@@ -21,5 +22,31 @@ html {
 
 body {
   background-color: var(--bg-dark-navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+/* ==========
+ main.app
+ ========== */
+.app {
+  background-color: var(--bg-white);
+  border-radius: 0 0 2.25rem 2.25rem;
+  width: 100%;
+  max-width: 28.125rem;
+  min-height: 100vh;
+}
+
+/* ==========
+ section.hero
+ ========== */
+.hero {
+  margin-bottom: 2.5rem;
+}
+
+.hero__img {
+  width: 100%;
 }
