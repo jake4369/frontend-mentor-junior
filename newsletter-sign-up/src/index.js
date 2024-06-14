@@ -4,6 +4,7 @@ import "./index.css";
 import App from "./App";
 import Success from "./components/Success";
 import { EmailProvider } from "./context/emailContext";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -14,7 +15,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/success",
-    element: <Success />,
+    element: (
+      <ProtectedRoute>
+        <Success />
+      </ProtectedRoute>
+    ),
   },
 ]);
 
