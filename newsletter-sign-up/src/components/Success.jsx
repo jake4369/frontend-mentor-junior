@@ -1,8 +1,14 @@
 import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import { EmailContext } from "../context/emailContext";
 
 const Success = () => {
   const { email } = useContext(EmailContext);
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/");
+  };
 
   return (
     <div className="success-message">
@@ -20,7 +26,9 @@ const Success = () => {
         button inside to confirm your subscription.
       </p>
 
-      <button className="btn-dismiss">Dismiss message</button>
+      <button className="btn-dismiss" onClick={handleClick}>
+        Dismiss message
+      </button>
     </div>
   );
 };
