@@ -3,7 +3,7 @@ const Hero = () => {
     <section className="hero">
       <picture>
         <source
-          media="(min-width: 992px )"
+          media="(min-width: 62rem )"
           srcSet="/assets/images/illustration-sign-up-desktop.svg"
         />
         <img
