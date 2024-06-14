@@ -1,4 +1,6 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { useNavigate } from "react-router-dom";
+import { EmailContext } from "../context/emailContext";
 
 const listText = [
   { id: 0, text: "Product discovery and building what matters" },
@@ -9,8 +11,9 @@ const listText = [
 const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
 const Form = () => {
-  const [email, setEmail] = useState("");
+  const { email, setEmail } = useContext(EmailContext);
   const [emailIsValid, setEmailIsValid] = useState(true);
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setEmail(e.target.value);
@@ -18,6 +21,8 @@ const Form = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    console.log(email);
 
     if (!emailRegex.test(email)) {
       setEmail("");
@@ -27,6 +32,7 @@ const Form = () => {
 
     setEmail("");
     setEmailIsValid(true);
+    navigate("/success");
   };
 
   return (
@@ -51,7 +57,7 @@ const Form = () => {
         })}
       </ul>
 
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} method="post" action="/success">
         <div className="labels">
           <label htmlFor="email" className="form-label">
             Email address
@@ -63,6 +69,7 @@ const Form = () => {
 
         <input
           type="text"
+          name="email"
           placeholder="email@company.com"
           id="email"
           value={email}
