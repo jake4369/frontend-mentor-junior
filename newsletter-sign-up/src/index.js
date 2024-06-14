@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
+import Success from "./components/Success";
 import { EmailProvider } from "./context/emailContext";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -13,7 +14,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/success",
-    element: <h1>Success</h1>,
+    element: <Success />,
   },
 ]);
 
