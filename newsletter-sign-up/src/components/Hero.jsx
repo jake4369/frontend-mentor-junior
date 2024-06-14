@@ -4,7 +4,7 @@ const Hero = () => {
       <picture>
         <source
           media="(min-width: 992px )"
-          srcset="/assets/images/illustration-sign-up-desktop.svg"
+          srcSet="/assets/images/illustration-sign-up-desktop.svg"
         />
         <img
           src="/assets/images/illustration-sign-up-mobile.svg"
