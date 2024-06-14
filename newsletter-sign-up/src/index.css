@@ -129,6 +129,17 @@ form input::placeholder {
   opacity: 0.5;
 }
 
+form input.error {
+  color: var(--error-vermillion);
+  border-color: var(--error-vermillion);
+  background: rgba(255, 97, 85, 0.15);
+  background: rgba(255, 97, 85, 0.15);
+}
+
+form input.error::placeholder {
+  color: var(--error-vermillion);
+}
+
 form .btn-subscribe {
   color: var(--white);
   text-align: center;
