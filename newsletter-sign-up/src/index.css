@@ -23,11 +23,15 @@ html {
 
 body {
   background-color: var(--bg-dark-navy);
-  display: flex;
-  justify-content: center;
-  height: 100%;
-  min-height: 100vh;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* ==========
@@ -36,11 +40,8 @@ body {
 .app {
   background-color: var(--bg-white);
   color: var(--dark-navy);
-  border-radius: 0 0 2.25rem 2.25rem;
   width: 100%;
-  max-width: 28.125rem;
-  height: 100%;
-  min-height: 100vh;
+  max-width: 48rem;
 }
 
 /* ==========
@@ -52,6 +53,9 @@ body {
 
 .hero__img {
   width: 100%;
+  max-height: 25rem;
+  object-fit: cover;
+  border-radius: 0 0 1rem 1rem;
 }
 
 /* ==========
@@ -151,4 +155,63 @@ form .btn-subscribe {
   border-radius: 0.5rem;
   outline: none;
   padding: 1.125rem 0 0.875rem;
+}
+
+/* ========== 
+ MEDIA QUERIES
+ ========== */
+@media (min-width: 62rem) {
+  /* ==========
+  main.app
+  ========== */
+  .app {
+    width: 58rem;
+    max-width: unset;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 1.5rem 1.5rem 4rem;
+    border-radius: 2.25rem;
+  }
+
+  /* ==========
+  section.hero
+  ========== */
+  .hero {
+    margin-bottom: 0;
+  }
+
+  .hero__img {
+    width: 100%;
+    max-height: unset;
+    object-fit: cover;
+    width: 25rem;
+    border-radius: 1rem;
+  }
+
+  /* ==========
+  section.section__form
+  ========== */
+  .section__form {
+    width: 23.5rem;
+    margin: 0;
+  }
+
+  .section__form h1 {
+    font-size: 3.5rem;
+  }
+
+  form .btn-subscribe {
+    cursor: pointer;
+  }
+
+  form .btn-subscribe:hover,
+  form .btn-subscribe:focus {
+    background: var(
+      --Gradient-1,
+      linear-gradient(204deg, #ff6a3a 0%, #ff527b 100%)
+    );
+    box-shadow: 0px 16px 32px 0px rgba(255, 97, 85, 0.5);
+  }
 }
