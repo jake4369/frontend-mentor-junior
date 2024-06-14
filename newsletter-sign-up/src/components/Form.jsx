@@ -11,27 +11,27 @@ const listText = [
 const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
 const Form = () => {
-  const { email, setEmail } = useContext(EmailContext);
+  const { setEmail } = useContext(EmailContext);
+  const [userInput, setUserInput] = useState("");
   const [emailIsValid, setEmailIsValid] = useState(true);
   const navigate = useNavigate();
 
   const handleChange = (e) => {
-    setEmail(e.target.value);
+    setUserInput(e.target.value);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    console.log(email);
-
-    if (!emailRegex.test(email)) {
+    if (!emailRegex.test(userInput)) {
       setEmail("");
+      setUserInput("");
       setEmailIsValid(false);
       return;
     }
 
-    setEmail("");
     setEmailIsValid(true);
+    setEmail(userInput);
     navigate("/success");
   };
 
@@ -72,12 +72,12 @@ const Form = () => {
           name="email"
           placeholder="email@company.com"
           id="email"
-          value={email}
+          value={userInput}
           onChange={(e) => handleChange(e)}
           className={!emailIsValid ? "error" : ""}
         />
 
-        <button className="btn-subscribe" disabled={!email}>
+        <button className="btn-subscribe" disabled={!userInput}>
           Subscribe to montly newsletter
         </button>
       </form>
