@@ -78,18 +78,4 @@ const Form = () => {
   );
 };
 
-const Heading = () => {
-  return <h1>Stay updated!</h1>;
-};
-
-const ListItem = ({ text }) => {
-  return (
-    <li>
-      <img src="/assets/images/icon-list.svg" alt="" className="list-icon" />
-
-      {text}
-    </li>
-  );
-};
-
 export default Form;
