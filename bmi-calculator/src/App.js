@@ -1,7 +1,11 @@
+import Hero from "./components/Hero";
+
 const App = () => {
   return (
-    <div>App</div>
-  )
-}
+    <main className="app">
+      <Hero />
+    </main>
+  );
+};
 
-export default App
+export default App;
