@@ -3,10 +3,11 @@ import { useNavigate } from "react-router-dom";
 import { EmailContext } from "../context/emailContext";
 
 const Success = () => {
-  const { email } = useContext(EmailContext);
+  const { email, setEmail } = useContext(EmailContext);
   const navigate = useNavigate();
 
   const handleClick = () => {
+    setEmail("");
     navigate("/");
   };
 
