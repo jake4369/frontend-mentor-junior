@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/newsletter-sign-up-form-with-success-message-lus6oawiuQ]
+- Live Site URL: [https://666d7bc9a47b0ad2c1485536--luminous-begonia-0ccc67.netlify.app/]
 
 ## My process
 
